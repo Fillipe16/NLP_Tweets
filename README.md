@@ -7,3 +7,5 @@ Empresas de todo o mundo utilizam do marketing digitqal a fim de aumentar seu fa
 ## Processamento de Linguagem Natural em comentários do Tweet
 
 Tendo em vista a importância da análise de sentimento de comentários em redes sociais, este projeto utilizou de dados reais extraído do link: https://www.kaggle.com/competitions/tweet-sentiment-extraction/data, para treinamento de uma Rede Neural Recorrente. O modelo treinado foi implementado num ambiente em nuvem, no qual comentários do Twitter são análisados pelo modelo e feita a classificação do comentario em: Positivo, Negativo ou Neutro. Os dados gerados pelo modelo são visualizados num Dashboard.
+
+Status: In progress
