@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Empresas de todo o mundo utilizam do marketing digitqal a fim de aumentar seu faturamento ou engajamento com a marca, no chamado brand awareness. Nesse contexto, as redes sociais surgem nas pessoas comentando sobre produtos e serviços que tais empresas disponibilizam e, ter uma forma de reconhecer se tais interações estão sendo positivas ou negativas é de grande ajuda no cálculo das métricas de eficiencia do marketing digital que está sendo realizado, tendo como fim uma melhor tomada de decisão de tal setor.
+Empresas de todo o mundo utilizam do marketing digital a fim de aumentar seu faturamento ou engajamento com a marca, no chamado brand awareness. Nesse contexto, as redes sociais surgem nas pessoas comentando sobre produtos e serviços que tais empresas disponibilizam e, ter uma forma de reconhecer se tais interações estão sendo positivas ou negativas é de grande ajuda no cálculo das métricas de eficiencia do marketing digital que está sendo realizado, tendo como fim uma melhor tomada de decisão de tal setor.
 
 ## Processamento de Linguagem Natural em comentários do Tweet
 
