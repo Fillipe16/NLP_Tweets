@@ -14,6 +14,7 @@ Created on Sat Nov 26 10:44:53 2022
 import sys
 
 
+
 import tweepy
 import requests
 
@@ -29,6 +30,10 @@ import pytz
 import json
 from decouple import config
 
+path = config("path_folder")
+if(path not in sys.path):
+    sys.path.append(path)
+    
 from Model.tweet_model import Tweet
 from Controller.model_controller import model_ml
 
@@ -58,7 +63,7 @@ def post_request(url,data):
     except:
         print("Ocorreu um erro no método POST")
         
-def run_udf(tweet_obj,df_bar,df_stats):
+def run_udf(tweet_obj,df_bar,df_stats,spark):
    
     temporal_data = [{'date':tweet_obj.date,'sentiment':tweet_obj.sentiment_label}]
     bar_data = df_bar.toJSON().map(lambda j: json.loads(j)).collect()
@@ -125,7 +130,7 @@ class get_tweets(tweepy.StreamingClient):
         # Selecionando os dados para os gráficos
         df_bar,df_stats = tweet_obj.select(self.spark)
     
-        run_udf(tweet_obj,df_bar,df_stats)
+        run_udf(tweet_obj,df_bar,df_stats,self.spark)
         
         return 0
     
@@ -137,14 +142,12 @@ def main():
     
     clean_rules(streaming_client)
     
-    streaming_client.add_rules([tweepy.StreamRule("CR7 lang:en")])
+    streaming_client.add_rules([tweepy.StreamRule("The Last of Us lang:en")])
     streaming_client.filter()
 
 if __name__ == "__main__":
     
-    path = config("path_folder")
-    if(path not in sys.path):
-        sys.path.append(path)
+    
     main()
 
 

@@ -9,7 +9,7 @@ import re
 from transformers import pipeline
 from decouple import config
 
-path_model = config('path_model ')
+path_model = config('path_model')
 
 class model_ml():
     
