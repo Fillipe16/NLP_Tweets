@@ -142,7 +142,7 @@ def main():
     
     clean_rules(streaming_client)
     
-    streaming_client.add_rules([tweepy.StreamRule("The Last of Us lang:en")])
+    streaming_client.add_rules([tweepy.StreamRule("#MondayMotivation lang:en")])
     streaming_client.filter()
 
 if __name__ == "__main__":
